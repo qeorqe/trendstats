@@ -1,6 +1,11 @@
 import streamlit as st
+import pandas
+# import clickhouse_connect
 
-st.title("🎈 My new app")
+st.set_page_config(layout="wide")
+
+st.title("trendstats")
+
 st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+    "Various statistics about trends"
 )
