@@ -12,7 +12,8 @@ import queries
 try:
   client = clickhouse_connect.get_client(**st.secrets["clickhouse_cloud"], secure=True)
 except:
-  pass
+  st.write("Clickhouse connection error. Please check your credentials.")
+  st.stop()
 
 @st.cache_resource(ttl=8600000)
 def clickhouse_query(query):
